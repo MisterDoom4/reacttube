@@ -11,18 +11,19 @@ const StyledHeader = styled.div`
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 16px 32px;
+        padding: 16px 0px 2px 20px;
+        
         gap: 16px;
     }
 `;
-export default function Header(config) {
+export default function Header({config}) {
     return (
         <StyledHeader>
             <section className="userinfo">
-                <img src={`https://github.com/${config.children[2]}.png`} />
+                <img src={`https://github.com/${config.github}.png`} />
                 <div>
-                    <h2>{config.children[0]}</h2>
-                    <p>{config.children[1]}</p>
+                    <h2>{config.name}</h2>
+                    <p>{config.job}</p>
                 </div>
             </section>
         </StyledHeader>
